@@ -1,0 +1,12 @@
+Conjetura de collatz
+
+La conjetura de collatz es que segun el siguiente algorimo
+cualquier numero que yo elija, termina en 1
+
+loop [n] {
+   si n es par, se divide por 2
+   si n es inpar se aplica la formula (3 * n) + 1
+}
+
+
+

@@ -1,0 +1,51 @@
+Paradigmas de programacion
+
+   Orientado a objetos
+      Son capsulas donde conviven datos y funcionalidad
+
+   Estrucutrado
+      Prodecimientos a los cuales se les envia una estructura
+      de datos y el procedimiento retorna otra.
+      o bien realiza side effect (escribir archivo, leer tabla)
+    
+   Funcional - javascript
+      Functions as data
+      En los parametros y en el return se pueden pasar
+      funciones. Las funciones son un tipo mas de dato.
+      puede ir pasando de funcion en funcion como parametro
+      sin ningun problema.
+
+-------------------------------------------------
+
+
+Declarativos
+  Puede ser algunos lenguajes funcionales
+  SQL (DSL)
+  HTML (DSL)
+  Excel (Que es lo que tiene que hacer)
+
+VS
+
+Imperativos
+
+  Como hacer las cosas linea por linea
+   
+  
+Interpretados
+   Php
+   Javascript
+   python
+
+tipado Dinamico (las variables se definen cuando se inicializan y pueden cambiar de tipo)
+   let a = "hola"
+   a = 2
+
+Tipado estatico (El compilador no permitira esta operacion)
+
+   Integer x = 2;
+   x = "hola"
+
+ 
+
+
+
