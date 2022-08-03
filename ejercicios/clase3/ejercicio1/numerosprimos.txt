@@ -1,0 +1,21 @@
+Escribir la serie de numeros primos
+
+Como se descubre un numero primo.
+
+Definicion: Si un numero es "SOLO" divisible por 1 y por si mismo ? es primo.
+
+Como descubrir la serie
+
+voy a tener un array con los numeros primos
+
+let arrPrimos = [2]
+
+for (let disvover = 3;;discover++) {
+   si discover ES divisible (Que el resto de 0)
+   por algun elemento del array ? NO ES PRIMO
+   
+   SI es primo, lo agrego al array   
+   
+   Para agregar numeros al array utilizar arrPrimos.push(elNumeroPrimoDescubierto)
+
+}

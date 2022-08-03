@@ -1,0 +1,86 @@
+// Repositorio strangerThings
+// Alumna: Maria Victoria Belluzzo
+
+/* ENUNCIADO
+
+Conjetura de collatz
+
+La conjetura de collatz es que segun el siguiente algorimo
+cualquier numero que yo elija, termina en 1
+
+loop [n] {
+    si n es par, se divide por 2
+    si n es inpar se aplica la formula (3 * n) + 1
+}
+*/
+
+// RESOLUCIÓN
+
+// FUNCIÓN PAR
+function par(a){
+    return a/2;
+}
+
+// FUNCIÓN IMPAR
+function impar(b){
+    return 3*b + 1;
+}
+
+// FUNCION DIF_UNO
+function dif_uno(n){
+    while(n > 1){
+        if (esPar(n)){
+            n = par(n)
+        }else{
+            n = impar(n);
+        }
+        console.log(n);
+    }
+}
+
+// FUNCIÓN NÚMERO
+function numero(n){
+    if (n == 1){
+        n = impar(n);
+        console.log(n);
+        dif_uno(n)
+    }
+    else{
+        dif_uno(n)
+        }
+    }
+
+// INGRESO EN LA FUNCIÓN EL NÚMERO QUE DESEO EVALUAR MEDIANTE LA CONJETURA DE COLLATZ
+numero(1);
+console.log('------------------------------------')
+numero(2);
+console.log('------------------------------------')
+numero(3);
+console.log('------------------------------------')
+numero(5);
+console.log('------------------------------------')
+
+// Validaciones
+
+if (numero esta dentro de lo errado) {
+   alert('No trabajo con ese numero')
+   return
+}
+if (numero esta dentro de lo errado) {
+   alert('No trabajo con ese numero')
+   return
+}
+if (numero esta dentro de lo errado) {
+   alert('No trabajo con ese numero')
+   return
+}
+if (numero esta dentro de lo errado) {
+   alert('No trabajo con ese numero')
+   return
+}
+if (numero esta dentro de lo errado) {
+   alert('No trabajo con ese numero')
+   return
+}
+
+ConjeturaDeCollats()
