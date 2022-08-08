@@ -14,6 +14,5 @@ let funcionPrincipal = () => {
 }
 
 module.exports = {
-   funcionPrincipal,
-   esPrimo
+   funcionPrincipal
 }

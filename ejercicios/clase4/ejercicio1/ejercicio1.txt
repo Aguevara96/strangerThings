@@ -1,0 +1,10 @@
+Poder descubir los numeros primos del 1 al 1000
+
+y mostrarlos en el browser a medida que los voy descubriendo
+
+para esto, usar la libreria asyncForLoop
+
+1) Probar con el counter asincronico
+2) Familiarizarse con la funcion asyncForLoop
+3) Recien migrar el codigo que se encuentra en el for sincronico
+

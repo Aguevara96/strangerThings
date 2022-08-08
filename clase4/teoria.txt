@@ -1,0 +1,40 @@
+Funcion pura vs funcion impura
+
+Funcion pura, a mismo input mismo output siempre.
+
+Si tomamos por ejemplo:
+
+let esPrimo = (num, arr) => {
+   for (let i of arr) {
+      if (esDivisible(num, i)) {
+          return false
+          // de esta forma queda descartado...
+      }
+   }
+   return true;
+   // si pasa todas las pruebas de NO divisibilidad es primo
+}
+
+Este es una funcion pura (por ende totalmente reutilizable)
+Muy facil de testear
+
+Que significa funcion pura ? Que significa a mismo input mismo output
+
+Ejemplos de funciones puras
+
+Suma(3, 6) -> 9
+
+No importa cuantas veces lo llame
+
+si yo tengo
+--------------------------------------
+let z = 100
+
+let suma = x => {
+   return x + z
+}
+--------------------------------------
+
+No es pura, poruqe depende de un z que No esta en mi scope
+
+
