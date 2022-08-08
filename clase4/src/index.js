@@ -1,5 +1,4 @@
 require("./styles.css");
-let problemaCounter = require('./problemaCounter')
-let solucionCounter = require('./SolucionCounter')
+let numerosPrimosAsync = require('./numerosPrimosAsync')
 
-solucionCounter()
+numerosPrimosAsync.init()
