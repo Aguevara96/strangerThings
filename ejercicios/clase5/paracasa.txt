@@ -1,0 +1,5 @@
+Agregar a la tabla de usuarios creados de manera random ?
+un boton de borrar.
+
+Cuando hace click en ese boton, se borra esa fila.
+

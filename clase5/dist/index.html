@@ -18,36 +18,12 @@
       <div class="row fondonegro altura60">
 
       </div>
+      <div id="tabUsuarios" class="row altura60">
+
+
+      </div>
       <div class="row altura60">
 
-      </div>
-
-      <div class="row altura60">
-        <div class="col-sm-6">
-          <button type="button" class="btn btn-secondary">Secondary</button>
-        </div>
-        <div class="col-sm-6">
-          <button type="button" class="btn btn-primary">Primary</button>
-        </div>
-      </div>
-
-      <div class="row altura60">
-
-      </div>
-      <div id="ejercicio1" class="row altura60">
-         <div class="col-sm-12">
-            <div id="uno">
-               <div id="dos">
-                  <div id="tres">
-
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div>
-         <label>contador: </label>
-         <label id="txtContador"></label>
       </div>
     </div>
   </main>
@@ -56,6 +32,29 @@
     <input id="txtDisplay" type="text" value="1000" />
     <br />
     <input id="btnIncrementar" type="button" value="INCREMENTAR" />
+  </script>
+
+  <script type="mustache/tmpl" id="templateTablaUsuarios">
+   <table class="table">
+      <thead class="thead-dark">
+         <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">City</th>
+         </tr>
+      </thead>
+      <tbody>
+         {{#grupoRep}}
+         <tr>
+            <th>{{id}}</th>
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            <td>{{city}}</td>
+         </tr>
+         {{/grupoRep}}
+      </tbody>
+   </table>
   </script>
 
   <script src="./bundle.js"></script>
