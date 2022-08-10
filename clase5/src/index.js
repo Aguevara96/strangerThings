@@ -1,4 +1,3 @@
 require("./styles.css");
-let numerosPrimosAsync = require('./numerosPrimosAsync')
+require('./propagacionEventos')
 
-numerosPrimosAsync.init()
