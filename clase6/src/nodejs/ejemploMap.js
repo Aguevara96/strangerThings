@@ -9,6 +9,18 @@ let arrObj = [{
    lastName: "Kiehn"
 }]
 
-let arrFiltrado = arrObj.map(z => z)
+let arrMapeado = arrObj.map(z => {
+   return {
+      primerCaracter: [z.lastName, z.firstName].join(', ').charAt(0),
+      original: z,
+      claves: Object.keys(z)
+   }
+})
+
+let arrFiltrado = arrObj.filter(z => {
+   return Object.keys(z).length === 3
+})
+
+
 console.log(arrFiltrado)
 

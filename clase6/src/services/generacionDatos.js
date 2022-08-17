@@ -12,10 +12,13 @@ let obtenerDatosOriginales = () => {
    return arrUsu
 }
 
-let filtrarPorFirstname = (firstNameParam) => {
-
+let filtrarPorFirstName = firstNameParam => {
+   return arrUsu.filter(z =>
+      z.firstName.indexOf(firstNameParam) === 0
+   )
 }
 
+window.test = filtrarPorFirstName
 
 generarUsuarios()
 
