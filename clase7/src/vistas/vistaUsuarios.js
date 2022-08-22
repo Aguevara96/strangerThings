@@ -28,16 +28,13 @@ let render = (arrToRender = arrUsu) => {
 }
 
 document.addEventListener('EVT_BUSCAR_USURIO', e => {
-   console.log(e)
-   let filteredByName =
-      filtros.filtrarPorNombre(arrUsu, e.detail.firstName)
+   let filtered =
+      filtros.filtrarPorNombreCiudad(arrUsu,
+                              e.detail.firstName,
+                              e.detail.city)
 
    console.log()
-   render(filteredByName)
-
-   // Agregarle City
-   // En principio yo lo pondira en filtros
-
+   render(filtered)
 })
 
 
