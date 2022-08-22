@@ -6,6 +6,11 @@
   height: 60px;
 }
 
+.margen10 {
+   margin-top: 10px;
+ }
+
+
 #pruebaAnchor {
    height: 100px;
    width: 200px;

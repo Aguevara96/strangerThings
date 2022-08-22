@@ -4,8 +4,15 @@ document.addEventListener('click', e => {
    switch (e.target.id) {
       case 'txtFirstName':
          console.log('txt firt name click')
-         break;
+         break
       case 'btnBuscar':
+         e.preventDefault()
+         let filtros = {
+            firstName : SEL('txtFirstName').value,
+            city : SEL('txtCity').value
+         }
+         let evt = new CustomEvent('EVT_BUSCAR_USURIO', { detail: filtros })
+         document.dispatchEvent(evt)
          break
    }
 })
