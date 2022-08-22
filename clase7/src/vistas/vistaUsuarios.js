@@ -1,8 +1,6 @@
-let genUsuario = require('./lib/genusuario')
-let {SEL} = require('./utiles/utiles')
+let genUsuario = require('../lib/genusuario')
+let {SEL} = require('../utiles/utiles')
 let Mustache = require('mustache')
-
-console.log(genUsuario())
 
 /*
 Los pasos son:

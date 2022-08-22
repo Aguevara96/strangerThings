@@ -1,4 +1,4 @@
-require('./pruebaIdUsu')
+require('./vistas/vistaUsuarios')
 require('./controllers/filtros').init()
 let generacionDatos = require('./services/generacionDatos')
 
