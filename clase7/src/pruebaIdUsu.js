@@ -1,5 +1,5 @@
 let genUsuario = require('./lib/genusuario')
-let {SEL} = require('./utiles')
+let {SEL} = require('./utiles/utiles')
 let Mustache = require('mustache')
 
 console.log(genUsuario())

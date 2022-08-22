@@ -1,4 +1,4 @@
-let genUsuario = require('./lib/genusuario')
+let genUsuario = require('../lib/genusuario')
 
 let arrUsu = []
 

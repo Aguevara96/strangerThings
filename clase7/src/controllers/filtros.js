@@ -1,4 +1,4 @@
-let {SEL} = require('../utiles')
+let {SEL} = require('../utiles/utiles')
 
 document.addEventListener('click', e => {
    switch (e.target.id) {
@@ -6,12 +6,14 @@ document.addEventListener('click', e => {
          console.log('txt firt name click')
          break;
       case 'btnBuscar':
-         alert('guarda que aca recarga la pagina')
-         e.preventDefault()
-         break;
+         break
    }
 })
 
 SEL('txtFirstName').addEventListener('input', e => {
    console.log(e.target.value)
 })
+
+module.exports = {
+   init: () => {}
+}
