@@ -18,8 +18,6 @@ let filtrarPorFirstName = firstNameParam => {
    )
 }
 
-window.test = filtrarPorFirstName
-
 generarUsuarios()
 
 module.exports = {
