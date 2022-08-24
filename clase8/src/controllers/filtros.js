@@ -20,9 +20,11 @@ document.addEventListener('click', e => {
 
 document.addEventListener('click', e => {
    if (e.target.classList.contains('js-btnBorrar')) {
-      // armar el evento para disparar
-      // let evt = new CustomEvent
-      // document.dispachEvent
+      let evt = new CustomEvent(
+         'EVT_BORRAR_USUARIO', {
+            detail : e.target.dataset.id
+         })
+      document.dispatchEvent(evt)
    }
 })
 

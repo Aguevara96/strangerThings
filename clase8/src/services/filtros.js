@@ -15,8 +15,11 @@ let filtrarPorNombreCiudad = (arr, nombre, ciudad) => {
    return r2
 }
 
+let removerPorId = (arr, id) => arr.filter(z => z.id !== id)
+
 module.exports = {
    filtrarPorNombre,
    filtrarPorCity,
-   filtrarPorNombreCiudad
+   filtrarPorNombreCiudad,
+   removerPorId
 }

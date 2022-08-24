@@ -37,10 +37,10 @@ document.addEventListener('EVT_BUSCAR_USURIO', e => {
    render(filtered)
 })
 
-/*
-addEventListener con el nombre que hayan elegido
-crear un servicio para borrar un id de usuario
-volver a hacer el render. Que es llamar a render
-*/
+document.addEventListener('EVT_BORRAR_USUARIO', e => {
+   console.log(e)
+   arrUsu = filtros.removerPorId(arrUsu, e.detail)
+   render(arrUsu)
+})
 
 module.exports = render
