@@ -4,6 +4,7 @@ coverage/
 dist/*
 !dist/index.html
 !dist/css
+!dist/usuarios.json
 node_modules/
 *.log
 
