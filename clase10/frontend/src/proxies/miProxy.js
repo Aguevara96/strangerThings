@@ -1,5 +1,5 @@
 let traerTodosLosUsuarios = (onSuccess, onFail) => {
-   fetch('/usuarios.json')
+   fetch('/api/usuario')
    .then(z => z.json())
    .then(datos => {
       onSuccess(datos)

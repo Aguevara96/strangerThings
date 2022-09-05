@@ -15240,7 +15240,7 @@ eval("const faker = __webpack_require__(/*! faker */ \"./node_modules/faker/inde
   \********************************/
 /***/ ((module) => {
 
-eval("let traerTodosLosUsuarios = (onSuccess, onFail) => {\r\n   fetch('/usuarios.json')\r\n   .then(z => z.json())\r\n   .then(datos => {\r\n      onSuccess(datos)\r\n   })\r\n   .catch(e => {\r\n      onFail(e)\r\n   })\r\n}\r\n\r\nmodule.exports = {\r\n   traerTodosLosUsuarios\r\n}\n\n//# sourceURL=webpack://empty-project/./src/proxies/miProxy.js?");
+eval("let traerTodosLosUsuarios = (onSuccess, onFail) => {\r\n   fetch('/api/usuario')\r\n   .then(z => z.json())\r\n   .then(datos => {\r\n      onSuccess(datos)\r\n   })\r\n   .catch(e => {\r\n      onFail(e)\r\n   })\r\n}\r\n\r\nmodule.exports = {\r\n   traerTodosLosUsuarios\r\n}\n\n//# sourceURL=webpack://empty-project/./src/proxies/miProxy.js?");
 
 /***/ }),
 
