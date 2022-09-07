@@ -36,6 +36,7 @@ document.addEventListener('EVT_BORRAR_USUARIO', e => {
    console.log(e)
    arrUsu = filtros.removerPorId(arrUsu, e.detail)
    display(arrUsu)
+   $('#popupConfirmacionBorrado').modal('hide');
 })
 
 module.exports = render

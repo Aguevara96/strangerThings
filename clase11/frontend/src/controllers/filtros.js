@@ -1,5 +1,6 @@
 let {SEL, formToObject} = require('../utiles/utiles')
 let _ = require('underscore')
+let proxy = require('../proxies/miProxy')
 
 document.addEventListener('click', e => {
    switch (e.target.id) {
@@ -7,6 +8,7 @@ document.addEventListener('click', e => {
          console.log('txt firt name click')
          break
       case 'btnBuscar':
+         {
          e.preventDefault()
          let filtros = {
             firstName : SEL('txtFirstName').value,
@@ -14,6 +16,21 @@ document.addEventListener('click', e => {
          }
          let evt = new CustomEvent('EVT_BUSCAR_USURIO', { detail: filtros })
          document.dispatchEvent(evt)
+         }
+         break
+      case 'popupConfirmacionBorrado_OK':
+         {
+         let id = window.pantallaPrincipal.ultimoEvento.detail
+         let evt = window.pantallaPrincipal.ultimoEvento
+         proxy.borrarUnUsuario(
+            id,
+            () => {
+               document.dispatchEvent(evt)
+            },
+            e => {
+               alert('NO SE PUDO REALIZAR EL BORRADO - HACERLO CON BOOTSTRAP')
+            })
+         }
          break
    }
 })
@@ -23,16 +40,15 @@ document.addEventListener('click', e => {
       let evt = new CustomEvent(
          'EVT_BORRAR_USUARIO', {
             detail : e.target.dataset.id
-         })
+         }
+      )
 
-      // Esta bien, generar el evento EVT_BORRAR_USUARIO
-      // Pero no tendriamos que hacer el dispatch hasta tanto
-      // No tengamos la certeza que se borro del lado del
-      // server.
-      // Como ejercicio llamar al proxy y esperar la respuesta
-      // luego recien hacer el dispatch.
+      window.pantallaPrincipal.ultimoEvento = evt
 
-      document.dispatchEvent(evt)
+      $('#popupConfirmacionBorrado').modal({
+         show: true
+      });
+
    }
 })
 
