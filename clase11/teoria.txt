@@ -1,0 +1,49 @@
+TEORIA API REST
+
+CREATE-READ-UPDATE-DELETE
+
+En http, hay cuatro verbos -los mas utilizados-, que son:
+
+GET: READ
+POST: CREATE
+UPDATE
+DELETE
+
+EL GET tiene dos formas:
+
+/api/usuario/67fab3e1-154f-4baf-919f-ee7f186f58f5
+/api/usuario?firstName=D&City=A
+
+DELETE
+
+/api/usuario/67fab3e1-154f-4baf-919f-ee7f186f58f5
+
+QUE QUIERO QUE HAGAN*************************** ASOCIAR AL BOTON DE BORRAR
+
+function ejemploDeleteObject() {
+    fetch('/api/usuario/2f7d0bc6-ca18-4b1e-9fb3-84dcbd50a05b', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+        }
+        })
+        .then(function(response) {
+            console.log('response =', response);
+            return response.json();
+        })
+        .then(function(data) {
+            console.log('data = ', data);
+        })
+        .catch(function(err) {
+            console.error(err);
+        });
+}
+
+QUIERO INTEGRAR ESTO A EL TEMPLATE QUE TENEMOS
+
+
+
+
+
+
