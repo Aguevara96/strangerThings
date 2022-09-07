@@ -4,7 +4,7 @@ const path = require('path');
 const config = {
   entry: './src/index.js',
   output: {
-    path: path.resolve('/cursos/strangerThings/clase10/backend/public'),
+    path: path.resolve('/cursos/strangerThings/clase11/backend/public'),
     filename: 'bundle.js'
   },
   module: {

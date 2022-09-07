@@ -24,6 +24,14 @@ document.addEventListener('click', e => {
          'EVT_BORRAR_USUARIO', {
             detail : e.target.dataset.id
          })
+
+      // Esta bien, generar el evento EVT_BORRAR_USUARIO
+      // Pero no tendriamos que hacer el dispatch hasta tanto
+      // No tengamos la certeza que se borro del lado del
+      // server.
+      // Como ejercicio llamar al proxy y esperar la respuesta
+      // luego recien hacer el dispatch.
+
       document.dispatchEvent(evt)
    }
 })
