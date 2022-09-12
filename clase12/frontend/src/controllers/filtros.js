@@ -32,6 +32,18 @@ document.addEventListener('click', e => {
             })
          }
          break
+      case 'popupConfirmacionModificacion_OK':
+         let arrKeys = [...document.getElementsByClassName('js-key-modifica')].map(z => z.innerText)
+         let arrValues = [...document.getElementsByClassName('js-query-mod')].map(z => z.value)
+
+         let objRes = {}
+
+         for (let x = 0; x < arrKeys.length; x++) {
+            objRes[arrKeys[x]] = arrValues[x]
+         }
+
+         console.log(objRes)
+         break
    }
 })
 
@@ -61,11 +73,16 @@ document.addEventListener('click', e => {
       console.log(HTMLCOll)
       let arrCol = [...HTMLCOll.getElementsByClassName('js-modificable')]
       console.log(arrCol)
-      let mapa = arrCol.map(z => {
-         key: z.dataset.name;
+      let mapa = arrCol.map(z => { return {
+         key: z.dataset.name,
          value: z.innerHTML
-      })
+      }})
       console.log(mapa)
+
+      for (let k of mapa) {
+         let id = ['txtMod-', k.key].join('')
+         document.getElementById(id).value = k.value
+      }
 
       $('#popupConfirmacionModificacion').modal({
          show: true
