@@ -61,11 +61,15 @@ document.addEventListener('click', e => {
       console.log(HTMLCOll)
       let arrCol = [...HTMLCOll.getElementsByClassName('js-modificable')]
       console.log(arrCol)
-      let mapa = arrCol.map(z => { return {
-         key: z.dataset.name,
-         value: z.innerHTML }
+      let mapa = arrCol.map(z => {
+         key: z.dataset.name;
+         value: z.innerHTML
       })
       console.log(mapa)
+
+      $('#popupConfirmacionModificacion').modal({
+         show: true
+      });
    }
 })
 
