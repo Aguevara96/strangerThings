@@ -25,9 +25,15 @@ app.get('/api/usuario', (request, response) => {
 app.put('/api/usuario/:id', (request, response) => {
    response.setHeader('Content-Type', 'application/json');
    console.log(request.body)
+   /* Este borra y vuelve a crear
    let xs = arrUsuarios.filter(z => z.id !== request.body.id)
    xs.push(request.body)
    arrUsuarios = xs
+   */
+
+   let idx = arrUsuarios.findIndex(z => z.id === request.body.id)
+   arrUsuarios[idx] = request.body
+
    response
       .status(200)
       .end(JSON.stringify('OK'))
