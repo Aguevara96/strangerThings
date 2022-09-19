@@ -11,6 +11,14 @@ let funcionAsync = (contador, onFinish) => {
    setTimeout(() => onFinish(contador), 2000)
 }
 
+let wrapperAsync = contador => {
+   return new Promise((resolve) => {
+      funcionAsync(contador, cont => {
+         resolve(cont)
+      })
+   })
+}
+
 let funcionSinc = contador => {
    return incrementaContador(contador)
    /*
@@ -23,16 +31,31 @@ let funcionSinc = contador => {
    */
 }
 
-/*
-let wrapperFuncionAsync = () => {
-   return new Promise((resolve, reject) => {
-      funcionAsync(() => {
-         resolve()
-      })
+let crearPromiseInicial = valorInicial => {
+   return new Promise((resolve) => {
+      resolve(valorInicial)
    })
 }
-*/
 
+crearPromiseInicial(500)
+.then(z => wrapperAsync(z))
+.then(z => incrementaContador(z))
+.then(z => wrapperAsync(z))
+.then(z => funcionSinc(z))
+.then(z => wrapperAsync(z))
+.then(z => {
+   SEL('txtFirstName').value = 'TERMINA EL UNO'
+   return z
+})
+.then(z => wrapperAsync(z))
+.then(z => funcionSinc(z))
+.then(z => {
+   SEL('txtFirstName').value = 'TERMINA EL DOS'
+   return z
+})
+.catch(err => {})
+
+/* LO DEJO COMO REFERENCIA
 funcionAsync(100, x => {
    console.log(x)
    x = funcionSinc(x)
@@ -51,4 +74,4 @@ funcionAsync(100, x => {
       })
    })
 })
-
+*/
