@@ -1,3 +1,4 @@
+/*
 require('./ejemplitoBarraProgreso')()
 
 let vistaUsuarios = require('./vistas/vistaUsuarios')
@@ -8,4 +9,6 @@ require('./services/estructuraMemoria').init()
 let usuOrigs = generacionDatos.obtenerDatosOriginales()
 
 vistaUsuarios()
+*/
 
+require('./ejemploUpload')
