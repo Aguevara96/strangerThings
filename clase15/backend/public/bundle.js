@@ -15260,7 +15260,7 @@ eval("\r\nlet init = () => {\r\n   window.pantallaPrincipal = (!window.pantallaP
   \*********************************/
 /***/ ((module) => {
 
-eval("\r\nlet filtrarPorNombre = (arr, nombre) => {\r\n   let ret = arr.filter(z => z.firstName.indexOf(nombre) === 0)\r\n   return ret\r\n}\r\n\r\nlet filtrarPorCity = (arr, ciudad) => {\r\n   let ret = arr.filter(z => z.city.indexOf(ciudad) === 0)\r\n   return ret\r\n}\r\n\r\nlet filtrarPorNombreCiudad = (arr, nombre, ciudad) => {\r\n   let r1 = filtrarPorNombre(arr, nombre)\r\n   let r2 = filtrarPorCity(r1, ciudad)\r\n   return r2\r\n}\r\n\r\nlet removerPorId = (arr, id) => arr.filter(z => z.id !== id)\r\n\r\nmodule.exports = {\r\n   filtrarPorNombre,\r\n   filtrarPorCity,\r\n   filtrarPorNombreCiudad,\r\n   removerPorId\r\n}\n\n//# sourceURL=webpack://empty-project/./src/services/filtros.js?");
+eval("\r\nlet filtrarArrComienzaCon = (arr, nomKey, token) => {\r\n   let tokenLowerCase = token.toLowerCase()\r\n   return arr.filter(z => z[nomKey].toLowerCase().indexOf(tokenLowerCase) === 0)\r\n}\r\n\r\nlet filtrarPorNombre = (arr, nombre) => filtrarArrComienzaCon(arr, 'firstName', nombre)\r\nlet filtrarPorCity = (arr, ciudad) => filtrarArrComienzaCon(arr, 'city', ciudad)\r\n\r\nlet filtrarPorNombreCiudad = (arr, nombre, ciudad) => {\r\n   let r1 = filtrarPorNombre(arr, nombre)\r\n   let r2 = filtrarPorCity(r1, ciudad)\r\n   return r2\r\n}\r\n\r\nlet removerPorId = (arr, id) => arr.filter(z => z.id !== id)\r\n\r\nmodule.exports = {\r\n   filtrarPorNombre,\r\n   filtrarPorCity,\r\n   filtrarPorNombreCiudad,\r\n   removerPorId\r\n}\n\n//# sourceURL=webpack://empty-project/./src/services/filtros.js?");
 
 /***/ }),
 

@@ -1,13 +1,11 @@
 
-let filtrarPorNombre = (arr, nombre) => {
-   let ret = arr.filter(z => z.firstName.indexOf(nombre) === 0)
-   return ret
+let filtrarArrComienzaCon = (arr, nomKey, token) => {
+   let tokenLowerCase = token.toLowerCase()
+   return arr.filter(z => z[nomKey].toLowerCase().indexOf(tokenLowerCase) === 0)
 }
 
-let filtrarPorCity = (arr, ciudad) => {
-   let ret = arr.filter(z => z.city.indexOf(ciudad) === 0)
-   return ret
-}
+let filtrarPorNombre = (arr, nombre) => filtrarArrComienzaCon(arr, 'firstName', nombre)
+let filtrarPorCity = (arr, ciudad) => filtrarArrComienzaCon(arr, 'city', ciudad)
 
 let filtrarPorNombreCiudad = (arr, nombre, ciudad) => {
    let r1 = filtrarPorNombre(arr, nombre)
