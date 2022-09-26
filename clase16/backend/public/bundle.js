@@ -15204,6 +15204,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/componenteScriptCC/guia.js":
+/*!****************************************!*\
+  !*** ./src/componenteScriptCC/guia.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("let guiaz = {\r\n\tnivel1: \"Buenos dias, en que lo puedo ayudar\",\r\n\trp: [{\r\n\t\t    ID: \"\",\r\n\t\t    texto: \"Quiero comprar un celular\",\r\n\t\t    siguiente : \"\",\r\n\t\t},  {\r\n\t\t    ID: \"\",\r\n\t\t    consulta: \"Quiero mejorar mi abono\"\r\n        },\r\n        {\r\n            ID: \"\",\r\n            texto: \"Ya vio el modelo ? o la marca de celular ?\",\r\n            resp: [\"SI->VA A UN ID\", \"NO-> OTRO ID\"]\r\n        },\r\n        {\r\n            ID: \"\",\r\n            texto: \"Como desea pagarlo, tarjeta de credito ? o debito ?\",\r\n            resp: [\"Debito\", \"Credito\", \"No tengo acceso -> No tiene un familiar ??? o personal pay\"]\r\n        },\r\n        {\r\n            ID: \" \",\r\n            texto: \"Me deberia brindar el numero de tarjeta, y codigo de seguridad\"\r\n        },\r\n        {\r\n            ID: \"\",\r\n            texto: \"Querido operador, tome nota del los numeros\",\r\n            tmpl: \"NOMBRE_DEL_TEMPLATE\"\r\n        },\r\n        {\r\n            ID: \"\",\r\n            texto: \"Querido, operador, transferi la llamada a #324\"\r\n        }\r\n    ]\r\n}\r\n\r\nlet guia = [{\r\n        id: '',\r\n        prompt: \"Buenos dias, en que lo puedo ayudar\",\r\n        salidas: [{\r\n            texto: \"Quiero comprar un celular\",\r\n            enlace : \"\"\r\n        }, {\r\n            texto: \"Quiero mejorar mi abono\",\r\n            enlace: \"\"\r\n        }]\r\n    },\r\n]\r\n\r\n// Estudiar la posibilidad de boton de panico, para que el supervisor esuche la \r\n// llamada.\r\nmodule.exports = guia\r\n\n\n//# sourceURL=webpack://empty-project/./src/componenteScriptCC/guia.js?");
+
+/***/ }),
+
+/***/ "./src/componenteScriptCC/init.js":
+/*!****************************************!*\
+  !*** ./src/componenteScriptCC/init.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("let guia = __webpack_require__(/*! ./guia */ \"./src/componenteScriptCC/guia.js\")\r\n\r\nlet init = () => {\r\n    alert('ok')\r\n}\r\n\r\nmodule.exports = init\n\n//# sourceURL=webpack://empty-project/./src/componenteScriptCC/init.js?");
+
+/***/ }),
+
 /***/ "./src/controllers/inputController.js":
 /*!********************************************!*\
   !*** ./src/controllers/inputController.js ***!
@@ -15220,7 +15240,7 @@ eval("let {SEL, formToObject, armarObjetoDesdeHTML} = __webpack_require__(/*! ..
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("let vistaUsuarios = __webpack_require__(/*! ./vistas/vistaUsuarios */ \"./src/vistas/vistaUsuarios.js\")\r\n__webpack_require__(/*! ./controllers/inputController */ \"./src/controllers/inputController.js\").init()\r\nlet generacionDatos = __webpack_require__(/*! ./services/generacionDatos */ \"./src/services/generacionDatos.js\")\r\n__webpack_require__(/*! ./services/estructuraMemoria */ \"./src/services/estructuraMemoria.js\").init()\r\n\r\nlet usuOrigs = generacionDatos.obtenerDatosOriginales()\r\n\r\nvistaUsuarios()\r\n\n\n//# sourceURL=webpack://empty-project/./src/index.js?");
+eval("let vistaUsuarios = __webpack_require__(/*! ./vistas/vistaUsuarios */ \"./src/vistas/vistaUsuarios.js\")\r\n__webpack_require__(/*! ./controllers/inputController */ \"./src/controllers/inputController.js\").init()\r\nlet generacionDatos = __webpack_require__(/*! ./services/generacionDatos */ \"./src/services/generacionDatos.js\")\r\n__webpack_require__(/*! ./services/estructuraMemoria */ \"./src/services/estructuraMemoria.js\").init()\r\n__webpack_require__(/*! ./componenteScriptCC/init */ \"./src/componenteScriptCC/init.js\").init()\r\n\r\nlet usuOrigs = generacionDatos.obtenerDatosOriginales()\r\n\r\nvistaUsuarios()\r\n\n\n//# sourceURL=webpack://empty-project/./src/index.js?");
 
 /***/ }),
 

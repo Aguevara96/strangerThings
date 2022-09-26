@@ -1,4 +1,4 @@
-let guia = {
+let guiaz = {
 	nivel1: "Buenos dias, en que lo puedo ayudar",
 	rp: [{
 		    ID: "",
@@ -34,5 +34,19 @@ let guia = {
     ]
 }
 
+let guia = [{
+        id: '',
+        prompt: "Buenos dias, en que lo puedo ayudar",
+        salidas: [{
+            texto: "Quiero comprar un celular",
+            enlace : ""
+        }, {
+            texto: "Quiero mejorar mi abono",
+            enlace: ""
+        }]
+    },
+]
+
 // Estudiar la posibilidad de boton de panico, para que el supervisor esuche la 
 // llamada.
+module.exports = guia
