@@ -34,6 +34,8 @@ let guiaz = {
     ]
 }
 
+////// ESTA HAY QUE BORRARLA LA DEJO SOLO COMO REFERENCIA
+
 let guia = [{
         id: '078b0129-f8f5-442a-b8bb-1d0f9a01ccfe',
         prompt: "Buenos dias, en que lo puedo ayudar",
@@ -42,7 +44,7 @@ let guia = [{
             enlace : "290f88e7-dfdc-4be0-97e4-bb42a4204c5"
         }, {
             texto: "Quiero mejorar mi abono",
-            enlace: ""
+            enlace: "44426820-fb4f-4db4-bf56-e9c5dafffc6d"
         }]
     }, {
         id: '290f88e7-dfdc-4be0-97e4-bb42a4204c5',
@@ -52,6 +54,16 @@ let guia = [{
             enlace : ""
         }, {
             texto: "No, quiero averiguar",
+            enlace: ""
+        }]
+    }, {
+        id: '44426820-fb4f-4db4-bf56-e9c5dafffc6d',
+        prompt: "Este prompr es provisiorio",
+        salidas: [{
+            texto: "Respuesta uno",
+            enlace : ""
+        }, {
+            texto: "Respuesta dos",
             enlace: ""
         }]
     }
