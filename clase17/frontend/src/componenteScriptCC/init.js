@@ -43,10 +43,9 @@ let cargarGuia = (onFinish) => {
 }
 
 let init = () => {
-    alert()
     cargarGuia(z => {
         guia = guiaLocal
-        alert(guia.length)
+        window.guia = guia
         controller()
         fnRecursiva()
     })

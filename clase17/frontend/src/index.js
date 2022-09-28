@@ -7,5 +7,4 @@ let usuOrigs = generacionDatos.obtenerDatosOriginales()
 
 vistaUsuarios()
 
-alert()
 require('./componenteScriptCC/init')()

@@ -44,7 +44,7 @@ let guia = [{
             enlace : "290f88e7-dfdc-4be0-97e4-bb42a4204c5"
         }, {
             texto: "Quiero mejorar mi abono",
-            enlace: "44426820-fb4f-4db4-bf56-e9c5dafffc6d"
+            enlace: "1bb578b2-0d90-49ec-8c14-401a9d486948"
         }]
     }, {
         id: '290f88e7-dfdc-4be0-97e4-bb42a4204c5',
@@ -77,28 +77,28 @@ let guia = [{
             enlace: "f87711cb-ff00-4dcd-a78e-0d30a28c8412"
         }]
     }, {
-        ID: "ab7369a2-3ea2-11ed-b878-0242ac120002",
+        id: "ab7369a2-3ea2-11ed-b878-0242ac120002",
         prompt: "Excelente, ese celular está con un 10 por ciento del descuento",
         salidas: [{
             texto: "Si, lo llevo",
-            enlace : "ab7369a2-3ea2-11ed-b878-0242ac120002"
+            enlace : "a619c3c0-a681-4356-8593-3a011ad138d72"
         }, {
             texto: "No no lo llevo",
             enlace: "f87711cb-ff00-4dcd-a78e-0d30a28c8412"
         }]
     }, {
-        ID: "ab7369a2-3ea2-11ed-b878-0242ac120002",
+        id: "a619c3c0-a681-4356-8593-3a011ad138d72",
         prompt: "Como desea pagarlo, tarjeta de credito ? o debito ?",
         salidas: [{
             texto: "Debito, credito",
-            enlace : "8c7766ee-b0a0-4771-a40b-a23a80201aac"
+            enlace : "3b5cd570-3eb8-11ed-b878-0242ac120002"
         },{
             texto: "No, no tengo tarjetas, no uso",
-            enlace : "1ac42acc-f640-4859-91d6-1b5beb42087a"
+            enlace : "1bb578b2-0d90-49ec-8c14-401a9d486948"
         }]
     },
     {
-        ID: "3b5cd570-3eb8-11ed-b878-0242ac120002",
+        id: "3b5cd570-3eb8-11ed-b878-0242ac120002",
         prompt: "Me deberia brindar el numero de tarjeta, y codigo de seguridad",
         salidas: [{
             texto: "Querido operador, tome nota del los numeros",
@@ -110,19 +110,14 @@ let guia = [{
     },
 
     {
-        ID: "3b5cd570-3eb8-11ed-b878-0242ac120002",
+        id: "1bb578b2-0d90-49ec-8c14-401a9d486948",
         prompt: "Querido, operador, transferi la llamada a #324",
         salidas: [{
             texto: "Finalizar",
             enlace : "f87711cb-ff00-4dcd-a78e-0d30a28c8412"
         }]
-    },
-
-    
-
-
-    {
-        ID: "f87711cb-ff00-4dcd-a78e-0d30a28c8412",
+    },{
+        id: "f87711cb-ff00-4dcd-a78e-0d30a28c8412",
         prompt: "Cortar, Volver al comienzo",
         salidas: [{
             texto: "GO GO GO GO GO",
