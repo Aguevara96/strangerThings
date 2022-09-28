@@ -83,7 +83,7 @@ let guia = [{
             texto: "Si, lo llevo",
             enlace : "a619c3c0-a681-4356-8593-3a011ad138d72"
         }, {
-            texto: "No no lo llevo",
+            texto: "No, no lo llevo",
             enlace: "f87711cb-ff00-4dcd-a78e-0d30a28c8412"
         }]
     }, {

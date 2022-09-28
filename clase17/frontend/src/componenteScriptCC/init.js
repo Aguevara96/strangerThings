@@ -4,6 +4,8 @@ let guiaLocal = require('./guia')
 
 nodoActual = 0
 let guia = null
+let stackDeOpciones = []
+window.stackDeOpciones = stackDeOpciones
 
 let controller = () => {
     document.addEventListener('click', e => {
