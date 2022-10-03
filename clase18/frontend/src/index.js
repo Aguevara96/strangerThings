@@ -11,3 +11,4 @@ vistaUsuarios()
 require('./componenteScriptCC/init')()
 */
 
+require('./metricas/testmetricas').initComponent()
