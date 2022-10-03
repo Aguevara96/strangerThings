@@ -6,10 +6,13 @@ let optionStacker = require('./optionStacker')
 nodoActual = 0
 let guia = null
 
+let selectedIndexCopy = null // Esto es para optimizar el tiempo de respuesta
+                             // Guardo una copia en memoria del ultimo selected index
+
 let controller = () => {
     document.addEventListener('click', e => {
         if (e.target.id === 'btnOpcionesSiguiente') {
-            let indiceSeleccionado = SEL('opcionesScript').selectedIndex
+            let indiceSeleccionado = selectedIndexCopy
             let {enlace} = guia[nodoActual].salidas[indiceSeleccionado]
             // Segun que salida se eligio, voy a tener que buscarlo -el id-, dentro de la guia
             // hacer un filter para encontrar ese elemento, si no lo encuentro ALERT !!!!  
@@ -29,6 +32,10 @@ let controller = () => {
             fnRecursiva()
         }
     })
+    document.addEventListener('change', e => {        
+        selectedIndexCopy = e.target.selectedIndex    
+        console.log(selectedIndexCopy)
+    })
 }
 
 let fnRecursiva = () => {
@@ -37,6 +44,7 @@ let fnRecursiva = () => {
     let tmpl = '{{#salidas}}<option>{{texto}}</option>{{/salidas}}'
     let output = Mustache.render(tmpl, guia[nodoActual])
     SEL('opcionesScript').innerHTML = output
+    selectedIndexCopy = 0
 }
 
 let cargarGuia = (onFinish) => {

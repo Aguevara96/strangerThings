@@ -17,6 +17,9 @@ let guia = [{
         }, {
             texto: "No, quiero averiguar",
             enlace: "8c8fcfcd-5687-4087-b13d-b5c438305a40"
+        }, {
+            texto: "Solo quiero hacer prueba",
+            enlace: "f87711cb-ff00-4dcd-a78e-0d30a28c8412"
         }]
     }, {
         id: '44426820-fb4f-4db4-bf56-e9c5dafffc6d',
