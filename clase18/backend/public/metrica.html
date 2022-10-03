@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Template Basico HTML</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/micss.css" rel="stylesheet">
+  </head>
+  <body>
+  <main role="main">
+    <div class="container">
+      <div class="row fondonegro altura60">
+
+      </div>
+
+      <div class="row altura60">
+      </div>
+
+      <div id="displayForm" class="row">
+         <form>
+            <div class="row">
+               <div class="col-md-3">
+                  firstName
+               </div>
+               <div class="col-md-6">
+                  <input class="js-query" id="txtFirstName" type="text" data-name="firstName">
+               </div>
+               <div class="col-md-3">
+                  <progress id="barraProgreso" min="0" max="120" value="0"></progress>
+               </div>
+            </div>
+            <div class="row margen10">
+               <div class="col-md-3">
+                  City
+               </div>
+               <div class="col-md-5">
+                  <input class="js-query" id="txtCity" type="text" data-name="city">
+               </div>
+               <div class="col-md-3">
+
+               </div>
+            </div>
+            <div class="row margen10">
+               <div class="col-md-2">
+                  <input id="btnBuscar" type="submit" value="BUSCAR" />
+               </div>
+            </div>
+         </form>
+      </div>
+
+      <div class="row altura60">
+
+      </div>
+
+      <div id="tabUsuarios">
+
+
+      </div>
+      <div class="row altura60">
+
+      </div>
+      <div class="row altura60">
+         <div class="col-md-2"></div>
+         <div id="scriptPrompt" class="col-md-8 script-prompt">
+            Bienvenido, gracias x comunicarse, etc
+            Bienvenido, gracias x comunicarse, etc
+            Bienvenido, gracias x comunicarse, etc
+            Bienvenido, gracias x comunicarse, etc
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+      <div class="row altura60">
+         <div class="col-md-2"></div>
+         <div class="col-md-4 ">
+            <select id="opcionesScript" class="select">
+               <option value="opt1">opt1</option>
+               <option value="opt2">opt2</option>
+               <option value="opt1">opt3</option>
+               <option value="opt1">opt4</option>
+            </select> 
+         </div>
+         <div class="col-md-2">
+         </div>
+         <div class="col-md-2">
+            <input id="btnAnterior" class="btn btn-secondary" type="button" value="ANTERIOR" />
+         </div>
+         <div class="col-md-2">
+            <input id="btnOpcionesSiguiente" class="btn btn-secondary" type="button" value="SIGUIENTE" />
+         </div>
+      </div>
+    </div>
+
+
+    <div id="popupConfirmacionBorrado" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Borrado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Esta seguro que quiere borrar ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="popupConfirmacionBorrado_OK" class="btn btn-primary">Borrar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="popupConfirmacionModificacion" class="modal" tabindex="-1" role="dialog" data-id="">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modificacion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+               <div class="row">
+                  <div class="col-md-4 js-key-modifica">
+                     firstName
+                  </div>
+                  <div class="col-md-4">
+                     <input class="js-query-mod" id="txtMod-firstName" type="text" data-name="firstName">
+                  </div>
+                  <div class="col-md-4">
+
+                  </div>
+               </div>
+               <div class="row margen10">
+                  <div class="col-md-4 js-key-modifica">
+                     lastName
+                  </div>
+                  <div class="col-md-4">
+                     <input class="js-query-mod" id="txtMod-lastName" type="text" data-name="city">
+                  </div>
+                  <div class="col-md-4">
+
+                  </div>
+               </div>
+               <div class="row margen10">
+                  <div class="col-md-4 js-key-modifica">
+                     city
+                  </div>
+                  <div class="col-md-4">
+                     <input class="js-query-mod" id="txtMod-city" type="text" data-name="city">
+                  </div>
+                  <div class="col-md-4">
+
+                  </div>
+               </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="popupConfirmacionModificacion_OK" type="button" class="btn btn-primary"  data-dismiss="modal">Modificar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="template" id="templateEjercicio1">
+    <input id="txtDisplay" type="text" value="1000" />
+    <br />
+    <input id="btnIncrementar" type="button" value="INCREMENTAR" />
+  </script>
+
+  <script type="mustache/tmpl" id="templateTablaUsuarios">
+   <table class="table">
+      <thead class="thead-dark">
+         <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">City</th>
+            <th scope="col">Modificar</th>
+            <th scope="col">Borrar</th>
+         </tr>
+      </thead>
+      <tbody>
+         {{#grupoRep}}
+         <tr class="js-fila-{{id}}">
+            <th>{{id}}</th>
+            <td class="js-modificable" data-name="firstName">{{firstName}}</td>
+            <td class="js-modificable" data-name="lastName">{{lastName}}</td>
+            <td class="js-modificable" data-name="city">{{city}}</td>
+            <td><input type="button" value="MODIFICAR" class="js-btnModificar" data-id={{id}} /></td>
+            <td><input type="button" value="BORRAR" class="js-btnBorrar" data-id={{id}} /></td>
+         </tr>
+         {{/grupoRep}}
+      </tbody>
+   </table>
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./bundle.js"></script>
+
+</html>

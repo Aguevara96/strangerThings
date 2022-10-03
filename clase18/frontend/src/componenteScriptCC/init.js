@@ -32,7 +32,7 @@ let controller = () => {
             fnRecursiva()
         }
     })
-    document.addEventListener('change', e => {        
+    document.addEventListener('change', e => {
         selectedIndexCopy = e.target.selectedIndex    
         console.log(selectedIndexCopy)
     })
