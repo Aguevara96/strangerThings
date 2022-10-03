@@ -1,24 +1,31 @@
 let {SEL} = require('../utiles/utiles')
 let Mustache = require('mustache')
 let guiaLocal = require('./guia')
+let optionStacker = require('./optionStacker')
 
 nodoActual = 0
 let guia = null
-let stackDeOpciones = []
-window.stackDeOpciones = stackDeOpciones
 
 let controller = () => {
     document.addEventListener('click', e => {
         if (e.target.id === 'btnOpcionesSiguiente') {
             let indiceSeleccionado = SEL('opcionesScript').selectedIndex
-            let {enlace} = guia[nodoActual].salidas[indiceSeleccionado]            
+            let {enlace} = guia[nodoActual].salidas[indiceSeleccionado]
             // Segun que salida se eligio, voy a tener que buscarlo -el id-, dentro de la guia
             // hacer un filter para encontrar ese elemento, si no lo encuentro ALERT !!!!  
             let nuevoIndex = guia.findIndex(z => z.id === enlace)
             if (nuevoIndex === -1) {
                 alert("Atencion, no se encontro el enlace: " + enlace)
             }
+            optionStacker.pushStack(nodoActual)
             nodoActual = nuevoIndex
+            fnRecursiva()
+        }
+        if (e.target.id === 'btnAnterior') {
+            if (optionStacker.isEmpty()) {
+                return
+            }
+            nodoActual = optionStacker.popStack()
             fnRecursiva()
         }
     })
@@ -30,7 +37,6 @@ let fnRecursiva = () => {
     let tmpl = '{{#salidas}}<option>{{texto}}</option>{{/salidas}}'
     let output = Mustache.render(tmpl, guia[nodoActual])
     SEL('opcionesScript').innerHTML = output
-
 }
 
 let cargarGuia = (onFinish) => {
